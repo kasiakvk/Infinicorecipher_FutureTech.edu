@@ -1,0 +1,381 @@
+{
+  "version": "2.0",
+  "description": "Zaktualizowana konfiguracja organizatora Infinicorecipher Platform",
+  "lastUpdated": "2025-12-25",
+  "platformInfo": {
+    "name": "Infinicorecipher Platform",
+    "version": "1.0.0",
+    "description": "Zaawansowana Platforma Edukacyjna z Kryptograficznym Zabezpieczeniem",
+    "architecture": "8-layer microservices"
+  },
+  "settings": {
+    "createBackups": true,
+    "verboseLogging": false,
+    "forceOverwrite": false,
+    "skipHiddenFiles": true,
+    "preserveTimestamps": true,
+    "createMissingDirectories": true,
+    "generateReadmes": true,
+    "validateStructure": true
+  },
+  "skipPatterns": [
+    "*.tmp",
+    "*.log",
+    "*.cache",
+    ".git/*",
+    ".git/**",
+    "node_modules/*",
+    "node_modules/**",
+    "bin/*",
+    "bin/**",
+    "obj/*",
+    "obj/**",
+    "backup_*",
+    "*.backup_*",
+    ".vs/*",
+    ".vscode/*",
+    "organize_*.ps1",
+    "quick_organize*.ps1",
+    "structure_validator.ps1",
+    "roadmap_manager.ps1",
+    "misc/backups/*",
+    "misc/logs/*",
+    "misc/temp/*"
+  ],
+  "infinicorecipherMappings": {
+    "mainFiles": {
+      "infinicorecipher_platform_readme.md": "README.md",
+      "LICENSE": "LICENSE",
+      "package.json": "package.json",
+      ".gitignore": ".gitignore",
+      "CHANGELOG.md": "CHANGELOG.md"
+    },
+    "platformCore": {
+      "infinicorecipher_platform_config.json": "platform/core/config/platform.json",
+      "platform_integration_script.js": "platform/core/services/platform-integration.js"
+    },
+    "documentation": {
+      "DEPLOYMENT_GUIDE.md": "docs/deployment/README.md",
+      "GITHUB_SECURITY_GUIDE.md": "docs/platform/security/github-security.md",
+      "INFINICORECIPHER_FAQ.md": "docs/platform/FAQ.md",
+      "README_IMPLEMENTATION.md": "docs/platform/implementation-guide.md",
+      "SETUP_ORDER_GUIDE.md": "docs/deployment/setup-order.md",
+      "implementation_guide.md": "docs/platform/architecture/implementation.md",
+      "infinicore_platform_structure.md": "docs/platform/architecture/structure.md",
+      "galactic_repository_analysis.md": "docs/platform/analysis/repository-analysis.md",
+      "optimized_galactic_structure.md": "docs/platform/architecture/optimized-structure.md",
+      "submodule_guide.md": "docs/platform/development/git/submodules.md",
+      "fix_git_signing.md": "docs/platform/development/git/signing.md",
+      "analiza_aktualnego_stanu.md": "docs/platform/analysis/current-state.md",
+      "README_ORGANIZATION.md": "docs/platform/organization-guide.md"
+    },
+    "infrastructure": {
+      "docker_compose_platform.yml": "infrastructure/docker/docker-compose.yml",
+      "Dockerfile": "infrastructure/docker/Dockerfile"
+    },
+    "applications": {
+      "galacticcode_web_client_template.html": "applications/galactic-code/web-client/templates/index.html",
+      "platform_integration_script.js": "applications/galactic-code/web-client/src/utils/platform-integration.js"
+    },
+    "toolsSetup": {
+      "create_infinicorecipher_platform.ps1": "tools/scripts/setup/create-platform.ps1",
+      "platform_services_generator.ps1": "tools/generators/service/platform-services.ps1",
+      "galacticcode_migration_script.ps1": "tools/migration/galactic-code-migration.ps1",
+      "organize_platform_files.ps1": "tools/scripts/setup/organize-files.ps1",
+      "quick_setup_platform.ps1": "tools/scripts/setup/quick-setup.ps1",
+      "organize_repository_universal.ps1": "tools/scripts/setup/organize-universal.ps1",
+      "quick_organize.ps1": "tools/scripts/setup/quick-organize.ps1",
+      "organize_infinicorecipher_structure.ps1": "tools/scripts/setup/organize-structure.ps1",
+      "quick_organize_infinicorecipher.ps1": "tools/scripts/setup/quick-organize-infinicorecipher.ps1"
+    },
+    "toolsGenerators": {
+      "create_platform_configs.ps1": "tools/generators/configuration/platform-configs.ps1",
+      "setup_infinicorecipher.ps1": "tools/scripts/setup/infinicorecipher-setup.ps1",
+      "create_config_files.ps1": "tools/generators/configuration/config-files.ps1"
+    },
+    "toolsGit": {
+      "github_security_setup.ps1": "tools/scripts/git/github-security-setup.ps1",
+      "test_github_connectivity.ps1": "tools/scripts/git/test-connectivity.ps1",
+      "fix_submodule_setup.ps1": "tools/scripts/git/fix-submodules.ps1"
+    },
+    "toolsAnalysis": {
+      "check_current_structure.ps1": "tools/scripts/analysis/check-structure.ps1",
+      "structure_validator.ps1": "tools/scripts/analysis/structure-validator.ps1"
+    },
+    "toolsMigration": {
+      "migrate_galacticcode_to_platform.ps1": "tools/migration/legacy/migrate-galacticcode.ps1",
+      "migrate_existing_files.ps1": "tools/migration/legacy/migrate-files.ps1",
+      "cleanup_legacy_structure.ps1": "tools/migration/legacy/cleanup.ps1",
+      "setup_galactic_structure.ps1": "tools/migration/legacy/setup-galactic.ps1"
+    },
+    "toolsManagement": {
+      "roadmap_manager.ps1": "tools/scripts/management/roadmap-manager.ps1"
+    },
+    "configuration": {
+      "organization_config.json": "config/organization.json",
+      "infinicorecipher_config_updated.json": "config/infinicorecipher.json",
+      "ssh_config_template.txt": "tools/templates/git/ssh-config.template"
+    },
+    "tests": {
+      "WebTests.cs": "tests/e2e/web/WebTests.cs"
+    },
+    "workingFiles": {
+      "todo.md": "docs/platform/development/TODO.md",
+      "ORGANIZATION_REPORT.md": "ORGANIZATION_REPORT.md",
+      "ROADMAP_PROGRESS_REPORT.md": "ROADMAP_PROGRESS_REPORT.md",
+      "STRUCTURE_VALIDATION_REPORT.md": "STRUCTURE_VALIDATION_REPORT.md"
+    }
+  },
+  "categoryRules": {
+    "platform": {
+      "priority": 95,
+      "patterns": ["*platform*", "*infinicorecipher*", "*core*"],
+      "keywords": ["platform", "core", "infinicorecipher", "security", "education", "analytics"],
+      "destinations": {
+        "config": "platform/core/config/",
+        "services": "platform/core/services/",
+        "security": "platform/security/",
+        "education": "platform/education/",
+        "analytics": "platform/analytics/",
+        "integration": "platform/integration/",
+        "shared": "platform/shared/"
+      }
+    },
+    "applications": {
+      "priority": 90,
+      "patterns": ["*galactic*", "*web-client*", "*unity*", "*mobile*", "*backend*"],
+      "keywords": ["galactic", "galacticcode", "web", "client", "unity", "mobile", "backend", "application"],
+      "destinations": {
+        "galactic": "applications/galactic-code/",
+        "web": "applications/galactic-code/web-client/",
+        "unity": "applications/galactic-code/unity-client/",
+        "mobile": "applications/galactic-code/mobile-client/",
+        "backend": "applications/galactic-code/backend/",
+        "shared": "applications/galactic-code/shared/"
+      }
+    },
+    "services": {
+      "priority": 88,
+      "patterns": ["*service*", "*gateway*", "*auth*", "*user*", "*analytics*", "*content*"],
+      "keywords": ["service", "gateway", "auth", "user", "analytics", "education", "content", "notification", "assessment"],
+      "destinations": {
+        "gateway": "services/platform-gateway/",
+        "auth": "services/auth-service/",
+        "user": "services/user-service/",
+        "analytics": "services/analytics-service/",
+        "education": "services/education-service/",
+        "content": "services/content-service/",
+        "notification": "services/notification-service/",
+        "assessment": "services/assessment-service/"
+      }
+    },
+    "infrastructure": {
+      "priority": 85,
+      "patterns": ["*docker*", "*kubernetes*", "*k8s*", "*terraform*", "*monitoring*", "*database*"],
+      "keywords": ["docker", "compose", "kubernetes", "k8s", "terraform", "monitoring", "prometheus", "grafana", "database", "migration"],
+      "destinations": {
+        "docker": "infrastructure/docker/",
+        "compose": "infrastructure/docker/",
+        "kubernetes": "infrastructure/kubernetes/",
+        "k8s": "infrastructure/kubernetes/",
+        "terraform": "infrastructure/terraform/",
+        "monitoring": "infrastructure/monitoring/",
+        "database": "infrastructure/database/",
+        "security": "infrastructure/security/"
+      }
+    },
+    "documentation": {
+      "priority": 80,
+      "patterns": ["*.md", "*.txt", "*.rst", "*.adoc"],
+      "keywords": ["readme", "doc", "guide", "manual", "tutorial", "help", "faq", "changelog", "license", "implementation", "setup", "deployment", "security", "api", "architecture"],
+      "destinations": {
+        "readme": "README.md",
+        "deployment": "docs/deployment/",
+        "security": "docs/platform/security/",
+        "api": "docs/services/api-reference/",
+        "architecture": "docs/platform/architecture/",
+        "development": "docs/platform/development/",
+        "education": "docs/education/",
+        "legal": "docs/legal/",
+        "analysis": "docs/platform/analysis/",
+        "implementation": "docs/platform/implementation/",
+        "troubleshooting": "docs/services/troubleshooting/",
+        "tutorials": "docs/tutorials/",
+        "setup": "docs/deployment/setup/",
+        "git": "docs/platform/development/git/",
+        "faq": "docs/platform/",
+        "organization": "docs/platform/"
+      }
+    },
+    "tools": {
+      "priority": 78,
+      "patterns": ["*.ps1", "*.sh", "*.bat", "*.cmd"],
+      "keywords": ["setup", "install", "deploy", "build", "test", "migrate", "backup", "clean", "generate", "create", "organize", "check", "fix", "github", "git", "roadmap", "validator"],
+      "destinations": {
+        "setup": "tools/scripts/setup/",
+        "deployment": "tools/scripts/deployment/",
+        "migration": "tools/migration/",
+        "backup": "tools/scripts/backup/",
+        "maintenance": "tools/scripts/maintenance/",
+        "analysis": "tools/scripts/analysis/",
+        "generators": "tools/generators/",
+        "git": "tools/scripts/git/",
+        "github": "tools/scripts/git/",
+        "docker": "tools/scripts/docker/",
+        "kubernetes": "tools/scripts/kubernetes/",
+        "monitoring": "tools/monitoring/",
+        "security": "tools/scripts/security/",
+        "organize": "tools/scripts/setup/",
+        "platform": "tools/generators/",
+        "services": "tools/generators/service/",
+        "quick": "tools/scripts/setup/",
+        "roadmap": "tools/scripts/management/",
+        "validator": "tools/scripts/analysis/",
+        "management": "tools/scripts/management/"
+      }
+    },
+    "configuration": {
+      "priority": 75,
+      "patterns": ["*.json", "*.yml", "*.yaml", "*.xml", "*.toml", "*.ini", "*.env", "*.config"],
+      "keywords": ["config", "settings", "environment", "docker", "compose", "kubernetes", "terraform", "platform", "organization", "infinicorecipher"],
+      "destinations": {
+        "platform": "platform/core/config/",
+        "docker": "infrastructure/docker/",
+        "compose": "infrastructure/docker/",
+        "kubernetes": "infrastructure/kubernetes/",
+        "terraform": "infrastructure/terraform/",
+        "monitoring": "infrastructure/monitoring/",
+        "database": "infrastructure/database/",
+        "security": "config/security/",
+        "environments": "config/environments/",
+        "services": "services/",
+        "organization": "config/",
+        "infinicorecipher": "config/"
+      }
+    },
+    "tests": {
+      "priority": 70,
+      "patterns": ["*.test.js", "*.test.ts", "*.test.cs", "*.spec.js", "*.spec.ts", "*Test.cs", "*Tests.cs"],
+      "keywords": ["test", "spec", "mock", "fixture", "e2e", "integration", "unit", "performance", "security", "accessibility"],
+      "destinations": {
+        "unit": "tests/unit/",
+        "integration": "tests/integration/",
+        "e2e": "tests/e2e/",
+        "performance": "tests/performance/",
+        "security": "tests/security/",
+        "accessibility": "tests/accessibility/",
+        "web": "tests/e2e/web/",
+        "api": "tests/integration/api/",
+        "platform": "tests/unit/platform/",
+        "applications": "tests/unit/applications/",
+        "services": "tests/unit/services/"
+      }
+    },
+    "packages": {
+      "priority": 65,
+      "patterns": ["*component*", "*util*", "*hook*", "*type*", "*constant*"],
+      "keywords": ["component", "ui", "util", "utility", "hook", "type", "constant", "shared", "common"],
+      "destinations": {
+        "ui": "packages/ui-components/",
+        "component": "packages/ui-components/",
+        "util": "packages/utils/",
+        "utility": "packages/utils/",
+        "hook": "packages/hooks/",
+        "type": "packages/types/",
+        "constant": "packages/constants/",
+        "shared": "packages/",
+        "common": "packages/"
+      }
+    },
+    "templates": {
+      "priority": 60,
+      "patterns": ["*.html", "*.css", "*.scss", "*.less", "*.template", "*.mustache", "*.hbs"],
+      "keywords": ["template", "layout", "component", "style", "theme", "web", "client", "galactic", "email"],
+      "destinations": {
+        "web": "applications/galactic-code/web-client/templates/",
+        "galactic": "applications/galactic-code/web-client/templates/",
+        "client": "applications/galactic-code/web-client/templates/",
+        "email": "services/notification-service/templates/",
+        "docker": "tools/templates/docker/",
+        "kubernetes": "tools/templates/kubernetes/",
+        "code": "tools/templates/code/",
+        "documentation": "tools/templates/documentation/",
+        "git": "tools/templates/git/"
+      }
+    }
+  },
+  "roadmapIntegration": {
+    "enableAutomaticUpdates": true,
+    "trackFileOrganization": true,
+    "generateProgressReports": true,
+    "phases": {
+      "Phase1": {
+        "name": "Organizacja Plików i Struktura",
+        "status": "completed",
+        "organizationTasks": [
+          "Analiza aktualnego stanu",
+          "Projekt struktury Infinicorecipher",
+          "Skrypty organizacji",
+          "Weryfikacja struktury"
+        ]
+      },
+      "Phase2": {
+        "name": "Fundament Infrastruktury",
+        "status": "in_progress",
+        "organizationTasks": [
+          "Uruchomienie skryptów organizacji",
+          "Konfiguracja Docker/Kubernetes",
+          "Setup bazy danych"
+        ]
+      }
+    }
+  },
+  "validationRules": {
+    "enableStructureValidation": true,
+    "enableNamingValidation": true,
+    "enableContentValidation": false,
+    "criticalDirectories": [
+      "platform/core/config",
+      "platform/security",
+      "applications/galactic-code",
+      "services/platform-gateway",
+      "infrastructure/docker",
+      "docs/platform"
+    ],
+    "criticalFiles": [
+      "README.md",
+      "platform/core/config/platform.json",
+      "infrastructure/docker/docker-compose.yml"
+    ]
+  },
+  "recommendations": {
+    "newApplications": "applications/",
+    "newServices": "services/",
+    "newTools": "tools/",
+    "newTests": "tests/",
+    "newDocumentation": "docs/",
+    "newConfiguration": "config/",
+    "regularRefresh": "Uruchamiać skrypty po większych zmianach",
+    "structureValidation": "Regularnie sprawdzać strukturę walidatorem"
+  },
+  "statistics": {
+    "totalRuns": 0,
+    "filesProcessed": 0,
+    "lastSuccessfulRun": null,
+    "averageProcessingTime": 0,
+    "mostCommonCategory": null,
+    "structureCompleteness": 0,
+    "lastValidation": null
+  },
+  "advanced": {
+    "enableContentAnalysis": true,
+    "maxContentScanLines": 10,
+    "confidenceThreshold": 20,
+    "enableSmartDestinations": true,
+    "createCategoryReadmes": true,
+    "generateReports": true,
+    "enableRoadmapIntegration": true,
+    "enableStructureValidation": true,
+    "autoFixCriticalIssues": false
+  }
+}
