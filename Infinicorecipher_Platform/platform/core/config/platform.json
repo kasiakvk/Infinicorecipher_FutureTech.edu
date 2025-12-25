@@ -1,0 +1,91 @@
+{
+  "platform": {
+    "name": "Infinicorecipher",
+    "version": "1.0.0",
+    "description": "Zaawansowana Platforma Edukacyjna",
+    "environment": "development"
+  },
+  "security": {
+    "encryption": {
+      "algorithm": "infinicorecipher",
+      "keySize": 2048,
+      "rotationInterval": "30d"
+    },
+    "compliance": {
+      "coppa": true,
+      "ferpa": true,
+      "gdpr": true
+    }
+  },
+  "services": {
+    "gateway": {
+      "port": 8000,
+      "host": "localhost"
+    },
+    "auth": {
+      "port": 8001,
+      "host": "localhost"
+    },
+    "user": {
+      "port": 8002,
+      "host": "localhost"
+    },
+    "analytics": {
+      "port": 8003,
+      "host": "localhost"
+    },
+    "education": {
+      "port": 8004,
+      "host": "localhost"
+    },
+    "content": {
+      "port": 8005,
+      "host": "localhost"
+    },
+    "notification": {
+      "port": 8006,
+      "host": "localhost"
+    },
+    "assessment": {
+      "port": 8007,
+      "host": "localhost"
+    }
+  },
+  "applications": {
+    "galacticCode": {
+      "web": {
+        "port": 3000,
+        "host": "localhost"
+      },
+      "backend": {
+        "port": 5000,
+        "host": "localhost"
+      }
+    }
+  },
+  "infrastructure": {
+    "database": {
+      "host": "localhost",
+      "port": 5432,
+      "name": "infinicorecipher"
+    },
+    "redis": {
+      "host": "localhost",
+      "port": 6379
+    },
+    "monitoring": {
+      "prometheus": {
+        "host": "localhost",
+        "port": 9090
+      },
+      "grafana": {
+        "host": "localhost",
+        "port": 3001
+      },
+      "jaeger": {
+        "host": "localhost",
+        "port": 16686
+      }
+    }
+  }
+}

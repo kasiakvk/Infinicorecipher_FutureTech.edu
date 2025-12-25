@@ -1,0 +1,67 @@
+# Pliki systemowe
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+
+# Środowiska
+.env
+.env.local
+.env.development
+.env.staging
+.env.production
+
+# Budowanie
+bin/
+obj/
+dist/
+build/
+node_modules/
+*.dll
+*.exe
+
+# IDE
+.vs/
+.vscode/
+*.swp
+*.swo
+.idea/
+
+# Testy
+coverage/
+test-results/
+*.trx
+
+# Bazy danych
+*.db
+*.sqlite
+
+# Sekrety
+secrets/
+*.key
+*.pem
+*.p12
+certificates/
+
+# Kopie zapasowe
+backup_*/
+*.backup_*
+
+# Logi
+logs/
+*.log
+
+# Tymczasowe
+temp/
+tmp/
+
+# Docker
+.dockerignore
+
+# Terraform
+*.tfstate
+*.tfstate.backup
+.terraform/
+
+# Kubernetes
+*.kubeconfig
