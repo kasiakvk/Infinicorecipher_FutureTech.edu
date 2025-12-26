@@ -1,0 +1,19 @@
+# InfiniCoreCipher Automation Framework Dependencies
+psutil>=5.8.0
+schedule>=1.1.0
+requests>=2.25.0
+watchdog>=2.1.0
+colorama>=0.4.4
+pyyaml>=6.0
+loguru>=0.6.0
+cryptography>=3.4.8
+flask>=2.0.0
+flask-cors>=3.0.10
+websockets>=10.0
+memory-profiler>=0.60.0
+plyer>=2.1.0
+python-dateutil>=2.8.2
+click>=8.0.0
+tqdm>=4.62.0
+netifaces>=0.11.0
+py-cpuinfo>=8.0.0

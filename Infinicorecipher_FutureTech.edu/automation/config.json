@@ -1,0 +1,34 @@
+{
+    "application": {
+        "name": "InfiniCoreCipher",
+        "executable_path": "C:\\InfiniCoreCipher-Startup\\InfiniCoreCipher.exe",
+        "startup_args": ["--auto-start", "--silent"],
+        "working_directory": "C:\\InfiniCoreCipher-Startup"
+    },
+    "monitoring": {
+        "check_interval": 30,
+        "cpu_threshold": 75,
+        "memory_threshold": 80,
+        "restart_on_failure": true,
+        "max_restart_attempts": 5
+    },
+    "logging": {
+        "level": "INFO",
+        "file": "logs/infinicore_automation.log",
+        "max_size_mb": 50,
+        "backup_count": 10
+    },
+    "notifications": {
+        "enabled": true,
+        "desktop": {
+            "enabled": true,
+            "critical_only": false
+        }
+    },
+    "security": {
+        "encryption_monitoring": true,
+        "key_rotation_check": true,
+        "certificate_expiry_check": true,
+        "security_scan_interval": 3600
+    }
+}
