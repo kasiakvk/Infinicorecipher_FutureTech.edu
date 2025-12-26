@@ -1,0 +1,148 @@
+version: '3.8'
+
+services:
+  # Platform Gateway
+  platform-gateway:
+    build: ./services/platform-gateway
+    ports:
+      - "8080:8080"
+    environment:
+      - NODE_ENV=development
+      - PLATFORM_MODE=educational
+    depends_on:
+      - auth-service
+      - user-service
+      - analytics-service
+
+  # Authentication Service
+  auth-service:
+    build: ./services/auth-service
+    ports:
+      - "8081:8081"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ENCRYPTION_PROFILE=student_data
+      - COMPLIANCE_MODE=strict
+    volumes:
+      - ./platform/security:/app/security
+
+  # User Management Service
+  user-service:
+    build: ./services/user-service
+    ports:
+      - "8082:8082"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ENCRYPTION_PROFILE=student_data
+    depends_on:
+      - auth-service
+
+  # Analytics Service
+  analytics-service:
+    build: ./services/analytics-service
+    ports:
+      - "8083:8083"
+    environment:
+      - PYTHON_ENV=development
+      - ENCRYPTION_PROFILE=assessment_data
+    volumes:
+      - ./platform/analytics:/app/analytics
+
+  # Progress Tracking Service
+  progress-service:
+    build: ./services/progress-service
+    ports:
+      - "8084:8084"
+    environment:
+      - NODE_ENV=development
+      - ENCRYPTION_PROFILE=assessment_data
+    depends_on:
+      - user-service
+
+  # Achievement Service
+  achievement-service:
+    build: ./services/achievement-service
+    ports:
+      - "8085:8085"
+    environment:
+      - NODE_ENV=development
+      - ENCRYPTION_PROFILE=general_content
+    depends_on:
+      - progress-service
+
+  # Content Management Service
+  content-service:
+    build: ./services/content-service
+    ports:
+      - "8086:8086"
+    environment:
+      - NODE_ENV=development
+      - ENCRYPTION_PROFILE=general_content
+
+  # Game Orchestrator
+  game-orchestrator:
+    build: ./services/game-orchestrator
+    ports:
+      - "8087:8087"
+    environment:
+      - NODE_ENV=development
+      - ENCRYPTION_PROFILE=general_content
+    depends_on:
+      - progress-service
+      - achievement-service
+
+  # GalacticCode Web Client
+  galactic-code-web:
+    build: ./applications/galactic-code/web-client
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_PLATFORM_API=http://localhost:8080
+      - REACT_APP_GAME_MODE=educational
+    volumes:
+      - ./applications/galactic-code/web-client/src:/app/src
+
+  # Database Services
+  postgres:
+    image: postgres:15
+    environment:
+      - POSTGRES_DB=infinicore_platform
+      - POSTGRES_USER=infinicore
+      - POSTGRES_PASSWORD=educational_secure_2024
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+  # Monitoring
+  prometheus:
+    image: prom/prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./infrastructure/monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+
+  grafana:
+    image: grafana/grafana
+    ports:
+      - "3001:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=educational_admin_2024
+    volumes:
+      - grafana_data:/var/lib/grafana
+
+volumes:
+  postgres_data:
+  redis_data:
+  grafana_data:
+
+networks:
+  default:
+    name: infinicore-platform

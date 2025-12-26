@@ -1,0 +1,180 @@
+# ================================
+# InfiniCoreCipher Git Ignore
+# ================================
+
+# ================================
+# Dependencies and Package Managers
+# ================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.pnpm-store/
+package-lock.json.bak
+yarn.lock.bak
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+pip-log.txt
+pip-delete-this-directory.txt
+.venv/
+
+# ================================
+# Build Artifacts and Output
+# ================================
+dist/
+dist-ssr/
+build/
+.next/
+.nuxt/
+.cache/
+.parcel-cache/
+*.local
+
+# Compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+Automation/edb_pem_server.exe-20251202023000
+Automation/*.exe*
+
+# ================================
+# Temporary and Log Files  
+# ================================
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# OneDrive reports and CSV data files
+OneDrive-*.csv
+*.csv
+
+# ================================
+# Archives and Compressed Files
+# ================================
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+*.dmg
+*.iso
+
+# ================================
+# IDE and Editor Files
+# ================================
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+.vs/
+
+# ================================
+# Environment and Configuration
+# ================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+
+# ================================
+# Operating System Files
+# ================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ================================
+# Testing and Coverage
+# ================================
+coverage/
+*.coveragerc
+.nyc_output/
+.pytest_cache/
+htmlcov/
+.coverage
+.coverage.*
+
+# ================================
+# Database Files
+# ================================
+*.sqlite
+*.sqlite3
+*.db
+*.db-shm
+*.db-wal
+
+# ================================
+# SSH and Security
+# ================================
+.ssh/id_*
+.ssh/known_hosts
+*.pem
+*.key
+!*.pub
+
+# ================================
+# Backups and Duplicates
+# ================================
+Backups/*.bak
+Backups/*.backup
+*.bak
+*.backup
+*.old
+
+# ================================
+# Documentation Build
+# ================================
+docs/_build/
+site/
+
+# ================================
+# Laptop Workspace (Local Only)
+# ================================
+laptop-workspace/local-development/*
+!laptop-workspace/local-development/.gitkeep
+laptop-workspace/personal-projects/*
+!laptop-workspace/personal-projects/.gitkeep
+laptop-workspace/testing-environment/temp/*
+laptop-workspace/testing-environment/logs/*
+laptop-workspace/backup/*
+
+# ================================
+# Office Documents Temporary Files
+# ================================
+office-documents/logs/*.log
+office-documents/temp/*
+~$*.doc*
+~$*.xls*
+~$*.ppt*
+>>>>>>> 0e4a08ab54de958ad24e50a10b637701d9b8de0f

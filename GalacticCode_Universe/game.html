@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galactic Code - Play</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0b0c10;
+            color: #fff;
+            text-align: center;
+        }
+        header {
+            background-color: #1f2833;
+            padding: 20px;
+        }
+        nav a {
+            color: #66fcf1;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 40px;
+        }
+        #game-container {
+            margin: 20px auto;
+            width: 80%;
+            max-width: 800px;
+            background-color: #1f2833;
+            border: 2px solid #45a29e;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: left;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 1em;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #45a29e;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #66fcf1;
+            color: #0b0c10;
+        }
+        #feedback {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        .game-info {
+            background-color: #1f2833;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 10px;
+            border: 2px solid #45a29e;
+        }
+        .characters-section, .game-modes {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .characters-grid, .modes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .character-card, .mode-card {
+            background-color: #1f2833;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #45a29e;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .character-card:hover, .mode-card:hover {
+            transform: translateY(-5px);
+            border-color: #66fcf1;
+        }
+        .character-card h3, .mode-card h3 {
+            color: #66fcf1;
+            margin-top: 0;
+        }
+        #challenge-description {
+            font-size: 1.1em;
+            margin: 15px 0;
+        }
+        #next-btn {
+            margin-left: 10px;
+        }
+        footer {
+            background-color: #1f2833;
+            padding: 15px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Galactic Code - Game Interface</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="game.html">Play Game</a>
+            <a href="terms.html">Terms of Use</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Ready to Code Among the Stars?</h2>
+        <p>Solve coding challenges to unlock new galaxies!</p>
+        
+        <div class="game-info">
+            <h3 style="color: #66fcf1;">📊 Your Progress</h3>
+            <p><strong>Level:</strong> <span id="level">1</span> | <strong>Points:</strong> <span id="points">0</span> | <strong>Galaxies Unlocked:</strong> <span id="galaxies">0</span></p>
+        </div>
+
+        <div id="game-container">
+            <h3 id="challenge-title">Challenge 1: Basic Math</h3>
+            <p id="challenge-description">What is 5 + 7?</p>
+            <input type="text" id="answer" placeholder="Enter your answer">
+            <button onclick="checkAnswer()">Submit</button>
+            <button onclick="nextChallenge()" id="next-btn" style="display:none;">Next Challenge</button>
+            <div id="feedback"></div>
+        </div>
+
+        <section class="characters-section">
+            <h2 style="color: #66fcf1; margin-top: 50px;">Meet the Characters</h2>
+            <div class="characters-grid">
+                <div class="character-card">
+                    <h3>🤖 Tech-Human Hybrid</h3>
+                    <p><strong>Role:</strong> Protagonist (You!)</p>
+                    <p>A fusion of human and AI, exploring the galaxy with advanced coding skills and adaptability. Your mission: uncover the secrets of the cosmos.</p>
+                </div>
+                <div class="character-card">
+                    <h3>🌟 Galactic Federation AI (GFAI)</h3>
+                    <p><strong>Role:</strong> Mentor & Guide</p>
+                    <p>A wise AI entity with vast galactic knowledge. GFAI guides you through your journey and provides strategic advice.</p>
+                </div>
+                <div class="character-card">
+                    <h3>👾 Zorvath</h3>
+                    <p><strong>Role:</strong> Antagonist</p>
+                    <p>A ruthless galactic warlord seeking to conquer the galaxy. You must stop his plans through coding challenges and strategic thinking.</p>
+                </div>
+                <div class="character-card">
+                    <h3>🔧 Lara</h3>
+                    <p><strong>Role:</strong> Space Station Engineer</p>
+                    <p>A friendly human engineer who helps you with mechanical skills and hacking challenges throughout your journey.</p>
+                </div>
+                <div class="character-card">
+                    <h3>✨ Arkea</h3>
+                    <p><strong>Role:</strong> Galactic Ambassador</p>
+                    <p>An enigmatic alien diplomat from the Luminari species, guiding galactic politics and offering mystical wisdom.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="game-modes">
+            <h2 style="color: #66fcf1; margin-top: 50px;">Game Modes</h2>
+            <div class="modes-grid">
+                <div class="mode-card">
+                    <h3>🎯 Single Player Missions</h3>
+                    <p>Progress through the storyline, solve challenges, and upgrade your abilities.</p>
+                </div>
+                <div class="mode-card">
+                    <h3>🏅 Galaxy Battle Pass</h3>
+                    <p>Complete seasonal challenges for exclusive rewards and badges.</p>
+                </div>
+                <div class="mode-card">
+                    <h3>👥 Galaxy Clubs</h3>
+                    <p>Join forces with other players in collaborative coding projects.</p>
+                </div>
+                <div class="mode-card">
+                    <h3>🎪 Weekend Festivals</h3>
+                    <p>Special weekend missions with unique challenges and prizes.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><strong>Copyright © 2025 InfiniCoreCipher. All rights reserved.</strong><br>
+        Website: Galactic Code | Author: Katarzyna Kalina vel Kalinowska</p>
+    </footer>
+
+    <script src="src/game.js"></script>
+</body>
+</html>

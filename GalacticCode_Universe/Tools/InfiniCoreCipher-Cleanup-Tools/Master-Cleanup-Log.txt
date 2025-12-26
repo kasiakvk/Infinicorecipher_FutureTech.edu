@@ -1,0 +1,42 @@
+[00:47:13] [INFO] ?? Wolne miejsce na poczatku: 239.77 MB
+[00:47:13] [INFO] ?? Sprawdzanie dostepnych skryptów...
+[00:47:13] [OK] ? System-Wide-Duplicate-Hunter.ps1 - dostepny
+[00:47:13] [OK] ? Deep-System-Cleanup.ps1 - dostepny
+[00:47:13] [ERROR] ? OneDrive-Check-Script.ps1 - brak
+[00:47:13] [OK] ? InfiniCoreCipher-Specific-Cleanup.ps1 - dostepny
+[00:47:13] [ERROR] ? OneDrive-Safe-Cleanup.ps1 - brak
+[00:47:13] [INFO] ?? DOSTEPNE OPCJE CZYSZCZENIA:
+[00:49:46] [INFO] ?? ROZPOCZECIE PROJECT ONLY CLEAN
+[00:49:46] [INFO] ?? InfiniCoreCipher Cleanup
+[00:49:46] [INFO] ?? PODSUMOWANIE MASTER CLEANUP
+[00:49:46] [INFO] ==============================
+[00:49:46] [INFO] ?? Miejsce przed: 239.77 MB
+[00:49:46] [INFO] ?? Miejsce po: 239.01 MB
+[00:49:46] [INFO] ?? Brak znaczacej zmiany miejsca na dysku
+[00:49:46] [INFO] ?? Czas wykonania: 00:02:33
+[00:49:46] [INFO] ?? Wykonane operacje: 1
+[00:49:46] [INFO] ?? LISTA WYKONANYCH OPERACJI:
+[00:49:46] [OK]    ? InfiniCoreCipher Cleanup - zakonczony
+[00:49:46] [INFO] ?? Szczególowe logi dostepne w:
+[00:49:46] [INFO]    ?? Master-Cleanup-Log.txt
+[00:49:46] [OK] ?? MASTER CLEANUP ZAKONCZONY!
+[00:50:15] [INFO] ?? Wolne miejsce na poczatku: 239.00 MB
+[00:50:15] [INFO] ?? Sprawdzanie dostepnych skryptów...
+[00:50:15] [OK] ? System-Wide-Duplicate-Hunter.ps1 - dostepny
+[00:50:15] [OK] ? Deep-System-Cleanup.ps1 - dostepny
+[00:50:15] [ERROR] ? OneDrive-Check-Script.ps1 - brak
+[00:50:15] [OK] ? InfiniCoreCipher-Specific-Cleanup.ps1 - dostepny
+[00:50:15] [ERROR] ? OneDrive-Safe-Cleanup.ps1 - brak
+[00:50:15] [INFO] ?? DOSTEPNE OPCJE CZYSZCZENIA:
+[00:50:31] [INFO] ?? ROZPOCZECIE ONEDRIVE ONLY CLEAN
+[00:50:31] [INFO] ?? PODSUMOWANIE MASTER CLEANUP
+[00:50:31] [INFO] ==============================
+[00:50:31] [INFO] ?? Miejsce przed: 239.00 MB
+[00:50:31] [INFO] ?? Miejsce po: 238.99 MB
+[00:50:31] [INFO] ?? Brak znaczacej zmiany miejsca na dysku
+[00:50:31] [INFO] ?? Czas wykonania: 00:00:16
+[00:50:31] [INFO] ?? Wykonane operacje: 0
+[00:50:31] [INFO] ?? LISTA WYKONANYCH OPERACJI:
+[00:50:31] [INFO] ?? Szczególowe logi dostepne w:
+[00:50:31] [INFO]    ?? Master-Cleanup-Log.txt
+[00:50:32] [OK] ?? MASTER CLEANUP ZAKONCZONY!

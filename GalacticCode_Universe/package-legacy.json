@@ -1,0 +1,35 @@
+{
+  "devDependencies": {
+    "lerna": "^8.0.0",
+    "@nx/core": "^17.0.0",
+    "concurrently": "^8.0.0"
+  },
+  "version": "2.0.0",
+  "private": true,
+  "description": "Enterprise-grade galactic codebase with Infinicorecipher integration",
+  "scripts": {
+    "build:apps": "lerna run build --scope=applications/*",
+    "dev:stop": "docker-compose down",
+    "migrate": "powershell -ExecutionPolicy Bypass -File migrate_existing_files.ps1",
+    "test:unit": "lerna run test --scope=testing/unit",
+    "build": "npm run build:services && npm run build:apps",
+    "setup:crypto": "powershell -ExecutionPolicy Bypass -File setup_infinicorecipher.ps1",
+    "setup": "npm run setup:structure && npm run setup:crypto",
+    "test": "npm run test:unit && npm run test:integration && npm run test:security",
+    "test:security": "powershell -ExecutionPolicy Bypass -File scripts/security/run-security-tests.ps1",
+    "dev": "docker-compose up -d",
+    "setup:structure": "powershell -ExecutionPolicy Bypass -File setup_galactic_structure.ps1",
+    "build:services": "lerna run build --scope=services/*",
+    "test:integration": "lerna run test --scope=testing/integration"
+  },
+  "name": "galactic-code-universe",
+  "workspaces": [
+    "services/*",
+    "applications/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

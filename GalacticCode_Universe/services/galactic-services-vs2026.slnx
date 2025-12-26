@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="Galactic Code Website Project VISUALSTUDIO2026.ApiService/Galactic Code Website Project VISUALSTUDIO2026.ApiService.csproj" />
+  <Project Path="Galactic Code Website Project VISUALSTUDIO2026.AppHost/Galactic Code Website Project VISUALSTUDIO2026.AppHost.csproj" />
+  <Project Path="Galactic Code Website Project VISUALSTUDIO2026.ServiceDefaults/Galactic Code Website Project VISUALSTUDIO2026.ServiceDefaults.csproj" />
+  <Project Path="Galactic Code Website Project VISUALSTUDIO2026.Tests/Galactic Code Website Project VISUALSTUDIO2026.Tests.csproj" />
+  <Project Path="Galactic Code Website Project VISUALSTUDIO2026.Web/Galactic Code Website Project VISUALSTUDIO2026.Web.csproj" />
+</Solution>

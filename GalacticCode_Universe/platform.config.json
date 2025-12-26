@@ -1,0 +1,161 @@
+{
+  "environments": {
+    "staging": {
+      "encryption_profile": "general_content",
+      "debug_mode": false,
+      "analytics_sampling": 0.5
+    },
+    "educational": {
+      "compliance_mode": "strict",
+      "encryption_profile": "student_data",
+      "debug_mode": false,
+      "analytics_sampling": 1.0
+    },
+    "production": {
+      "encryption_profile": "student_data",
+      "debug_mode": false,
+      "analytics_sampling": 1.0
+    },
+    "development": {
+      "encryption_profile": "development",
+      "debug_mode": true,
+      "analytics_sampling": 0.1
+    }
+  },
+  "educational_framework": {
+    "gamification": {
+      "achievement_system": true,
+      "points_system": true,
+      "enabled": true,
+      "leaderboards": true,
+      "badges": true
+    },
+    "progress_tracking": {
+      "parent_notifications": true,
+      "enabled": true,
+      "real_time_updates": true,
+      "granularity": "skill_based"
+    },
+    "content_management": {
+      "multi_language": true,
+      "curriculum_alignment": true,
+      "custom_content": true,
+      "accessibility": "WCAG_2.1_AA"
+    },
+    "assessment_engine": {
+      "enabled": true,
+      "detailed_analytics": true,
+      "adaptive_difficulty": true,
+      "immediate_feedback": true
+    }
+  },
+  "platform": {
+    "description": "Comprehensive educational gaming platform with multi-game support",
+    "version": "1.0.0",
+    "type": "educational_platform",
+    "name": "Infinicore Educational Platform"
+  },
+  "services": {
+    "platform_gateway": {
+      "port": 8080,
+      "encryption_profile": "general_content"
+    },
+    "progress_service": {
+      "port": 8084,
+      "encryption_profile": "assessment_data"
+    },
+    "auth_service": {
+      "port": 8081,
+      "encryption_profile": "student_data"
+    },
+    "user_service": {
+      "port": 8082,
+      "encryption_profile": "student_data"
+    },
+    "game_orchestrator": {
+      "port": 8087,
+      "encryption_profile": "general_content"
+    },
+    "analytics_service": {
+      "port": 8083,
+      "encryption_profile": "assessment_data"
+    },
+    "achievement_service": {
+      "port": 8085,
+      "encryption_profile": "general_content"
+    },
+    "content_service": {
+      "port": 8086,
+      "encryption_profile": "general_content"
+    }
+  },
+  "security": {
+    "encryption_enabled": true,
+    "student_data_protection": "COPPA_FERPA_compliant",
+    "encryption_profiles": {
+      "assessment_data": {
+        "strength": 32,
+        "tag_size": 16
+      },
+      "student_data": {
+        "strength": 48,
+        "tag_size": 20
+      },
+      "general_content": {
+        "strength": 24,
+        "tag_size": 12
+      },
+      "development": {
+        "strength": 16,
+        "tag_size": 9
+      }
+    },
+    "default_cipher_strength": 32
+  },
+  "applications": {
+    "science-lab": {
+      "name": "Science Lab",
+      "version": "1.0.0",
+      "status": "planned",
+      "type": "simulation_game",
+      "subjects": [
+        "physics",
+        "chemistry",
+        "biology",
+        "earth_science"
+      ],
+      "target_audience": "students_ages_10_18"
+    },
+    "math-quest": {
+      "name": "Math Quest",
+      "version": "1.0.0",
+      "status": "planned",
+      "type": "math_game",
+      "subjects": [
+        "mathematics",
+        "algebra",
+        "geometry",
+        "statistics"
+      ],
+      "target_audience": "students_ages_6_16"
+    },
+    "galactic-code": {
+      "name": "GalacticCode",
+      "version": "2.0.0",
+      "status": "active",
+      "type": "coding_game",
+      "difficulty_levels": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ],
+      "subjects": [
+        "computer_science",
+        "programming",
+        "logic",
+        "problem_solving"
+      ],
+      "target_audience": "students_ages_8_18"
+    }
+  }
+}

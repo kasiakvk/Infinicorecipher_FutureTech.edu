@@ -1,0 +1,59 @@
+{
+  "security": {
+    "default_cipher_strength": 32,
+    "encryption_profiles": {
+      "staging": {
+        "tag_size": 12,
+        "strength": 24
+      },
+      "high_security": {
+        "tag_size": 20,
+        "strength": 48
+      },
+      "production": {
+        "tag_size": 16,
+        "strength": 32
+      },
+      "development": {
+        "tag_size": 9,
+        "strength": 16
+      }
+    },
+    "default_tag_size": 16,
+    "key_rotation_interval": "30d"
+  },
+  "project": {
+    "description": "Enterprise-grade galactic codebase with Infinicorecipher integration",
+    "name": "GalacticCode Universe",
+    "version": "2.0.0"
+  },
+  "services": {
+    "game_service": {
+      "encryption_profile": "production",
+      "port": 8083
+    },
+    "web_gateway": {
+      "encryption_profile": "production",
+      "port": 8080
+    },
+    "auth_service": {
+      "encryption_profile": "high_security",
+      "port": 8081
+    },
+    "api_service": {
+      "encryption_profile": "production",
+      "port": 8082
+    }
+  },
+  "environments": {
+    "staging": {
+      "encryption_profile": "staging"
+    },
+    "production": {
+      "encryption_profile": "production"
+    },
+    "development": {
+      "encryption_profile": "development"
+    }
+  }
+}
