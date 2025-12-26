@@ -1,0 +1,63 @@
+# Dependencies
+node_modules/
+bower_components/
+vendor/
+
+# Build outputs
+bin/
+obj/
+dist/
+build/
+out/
+target/
+
+# IDE and Editor files
+.vs/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs and temporary files
+*.log
+*.tmp
+*.cache
+*.pid
+*.seed
+*.pid.lock
+
+# Environment and configuration
+.env
+.env.local
+.env.*.local
+*.local
+
+# Backups
+backup_*
+*.backup
+*.bak
+
+# OS files
+Thumbs.db
+Desktop.ini
+
+# Test coverage
+coverage/
+*.cover
+.nyc_output/
+
+# Package manager lock files (optional - uncomment if needed)
+# package-lock.json
+# yarn.lock
+# composer.lock
+
+# Compiled files
+*.exe
+*.dll
+*.so
+*.dylib
+*.class
+*.pyc
+*.pyo
