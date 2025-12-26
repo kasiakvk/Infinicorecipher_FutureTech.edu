@@ -1,14 +1,8 @@
-# kubernetes
+# kubernetes templates
 
-Szablony Kubernetes
+Templates for Kubernetes configurations.
 
-## Przeznaczenie
-
-Ten katalog jest częścią Platformy Edukacyjnej Infinicorecipher.
-
-## Zawartość
-
-*Katalog zostanie wypełniony podczas implementacji platformy.*
+This directory contains Kubernetes template files for the platform tools.
 
 ---
-*Wygenerowano automatycznie przez organize_infinicorecipher_final.ps1*
+*Auto-generated for repository consistency.*

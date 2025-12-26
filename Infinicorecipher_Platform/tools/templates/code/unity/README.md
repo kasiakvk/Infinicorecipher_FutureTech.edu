@@ -1,14 +1,8 @@
-# unity
+# unity templates
 
-Szablony Unity
+Templates for Unity code generation.
 
-## Przeznaczenie
-
-Ten katalog jest częścią Platformy Edukacyjnej Infinicorecipher.
-
-## Zawartość
-
-*Katalog zostanie wypełniony podczas implementacji platformy.*
+This directory contains Unity code templates for the platform tools.
 
 ---
-*Wygenerowano automatycznie przez organize_infinicorecipher_final.ps1*
+*Auto-generated for repository consistency.*
